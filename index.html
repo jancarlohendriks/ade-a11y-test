@@ -1,0 +1,399 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ADE a11y Test</title>
+	<link rel="stylesheet" href="./style.css">
+	<style>
+
+		.ade-checkbox__label:before {
+			display: none;
+		}
+
+		.ade-checkbox__check {
+			content: "";
+			height: 1.5rem;
+			width: 1.5rem;
+			background-color: transparent;
+			border-radius: 0;
+			flex-shrink: 0;
+			margin-top: .3rem;
+			left: 0;
+			position: absolute;
+			border: 1px solid #000;
+		}
+
+		.ade-checkbox__check {
+			content: "";
+			height: 1.5rem;
+			width: 1.5rem;
+			background-color: transparent;
+			border-radius: 0;
+			flex-shrink: 0;
+			margin-top: 0.3rem;
+			left: 0;
+			position: absolute;
+			border: 1px solid #000;
+		}
+
+		input:checked + .ade-checkbox__check,
+		.ade-checkbox__check[aria-checked="true"] {
+			background-color: #000;
+		}
+
+		.ade-checkbox:focus-within {
+			outline: 1px solid black;
+		}
+		
+		/* INPUT & SELECT */
+		.ade-select__select:focus,
+		.ade-input__input:focus {
+			padding-bottom: calc(1.2rem - 1px);
+			border-width: 2px;
+		}
+
+		/* BUTTON */
+		.ade-register__button:focus {
+			background-color: #d2d200;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="ade-members-layout__wrapper ade-container
+      ade-members-layout__wrapper--small-padding">
+		<div class="ade-flash-message"></div>
+		<div class="ade-members-layout__content">
+			<div class="ade-members-layout__back">
+				<div class="ade-text"><a href="/" target="" class="ade-link ade-arrow-link ade-arrow-link--hover">
+						<span class="ade-arrow-link__icon">
+							<svg width="17px" height="15px" viewBox="0 0 17 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g id="Sprint-1-Deliverables" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g id="8_About-ADE--Desktop" transform="translate(-119.000000, -530.000000)" stroke="#000000">
+										<g id="ARROW_BACK" transform="translate(121.000000, 530.000000)">
+											<g id="Arrow-Copy-6">
+												<g id="Arrow-Copy-5" fill-rule="nonzero" stroke-width="2">
+													<g id="Arrow-Copy-4"
+														transform="translate(7.500000, 7.000000) rotate(-180.000000) translate(-7.500000, -7.000000) ">
+														<g id="arrow" transform="translate(0.000000, 0.109804)">
+															<path d="M0.569523047,6.53333333 L14.2164477,6.53333333" id="Line-2"></path>
+															<polyline id="Path"
+																transform="translate(11.500000, 6.533333) rotate(-270.000000) translate(-11.500000, -6.533333) "
+																points="5.09276278 10.0333333 11.5 3.03333333 11.5 3.03333333 17.9072372 10.0333333">
+															</polyline>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</span>
+						Register
+					</a></div>
+			</div>
+
+			<h1 class="ade-h1 ade-h1--members ade-register__heading">Register</h1>
+
+			<form method="post" action="/en/user/register/" class="ade-form" data-module="_components/form/form"
+				enctype="multipart/form-data" id="profil-update" novalidate="true">
+
+				<div class="ade-form__wrapper ">
+
+					<input type="hidden" name="CRAFT_CSRF_TOKEN"
+						value="10ClyyAKrQ1h949Y_TdUeWypvZSoEqXuye084FThRhVF53Gu4-Yl2ZI0yodWbdhfC5_OFZdTEyYz3er1-CHyjLOFWIMgqHR3cpE6l7uKV7I=">
+					<input type="hidden" name="redirect"
+						value="e59cad802e853221ba37b0b7688f0ee512fcaa332c45561317c32ef72744ec3ehttps://www.amsterdam-dance-event.nl/en/my-ade/">
+					<input type="hidden" name="redirect"
+						value="e59cad802e853221ba37b0b7688f0ee512fcaa332c45561317c32ef72744ec3ehttps://www.amsterdam-dance-event.nl/en/my-ade/">
+
+					<div class="ade-register__inputs">
+
+						<div class="form__field">
+							<input id="address" type="text" class="form__input " placeholder="address" name="address" value="">
+						</div>
+
+						<div class="ade-input ade-mbottom  " data-type="text" data-module="_components/form/input">
+							<label class="ade-input__label ade-input__label--float ade-input__label--required"
+								for="ade-first-name">First name</label>
+							<div class="ade-input__wrapper">
+								<input type="text" placeholder="" pattern="" data-bouncer-message="" id="ade-first-name"
+									name="firstName" data-bouncer-target="#ade-first-name-msg" value="" minlength="" maxlength=""
+									class="ade-input__input " inputmode="" required="">
+							</div>
+							<div class="ade-input__msg" id="ade-first-name-msg"></div>
+						</div>
+
+						<div class="ade-input ade-mbottom  " data-type="text" data-module="_components/form/input">
+							<label class="ade-input__label ade-input__label--float ade-input__label--required"
+								for="ade-last-name">Last name</label>
+							<div class="ade-input__wrapper">
+								<input type="text" placeholder="" pattern="" data-bouncer-message="" id="ade-last-name" name="lastName"
+									data-bouncer-target="#ade-last-name-msg" value="" minlength="" maxlength="" class="ade-input__input "
+									inputmode="" required="">
+							</div>
+							<div class="ade-input__msg" id="ade-last-name-msg"></div>
+						</div>
+
+						<div class="ade-select ade-mbottom  " data-module="_components/form/select">
+							<label class="ade-select__label ade-select__label--required" for="ade-profile">I am a... (select what fits
+								best) *</label>
+							<div class="ade-select__wrapper">
+								<select class="ade-select__select" id="ade-profile" required="" name="profile"
+									data-bouncer-target="#ade-profile-msg">
+									<option value="">-</option>
+									<option value="music-professional">Music Professional</option>
+									<option value="artist-dj-creator">Artist / DJ / Creator</option>
+									<option value="other">Other</option>
+								</select>
+								<span class="ade-select__arrow">
+									<svg width="17px" height="19px" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<g id="4_Conference-Event-Item---Desktop-Copy-2" transform="translate(-1282.000000, -3864.000000)"
+												fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+												<g id="arrow"
+													transform="translate(1290.500000, 3873.000000) rotate(-270.000000) translate(-1290.500000, -3873.000000) translate(1282.000000, 3865.000000)">
+													<path d="M0.380952381,8 L15.8899675,8" id="Line-2"></path>
+													<polyline id="Path"
+														transform="translate(13.000000, 8.000000) rotate(-270.000000) translate(-13.000000, -8.000000) "
+														points="5.61590909 12 13 4 13 4 20.3840909 12"></polyline>
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+							<div class="ade-select__msg" id="ade-profile-msg"></div>
+						</div>
+
+						<div class="ade-input ade-mbottom  " data-type="email" data-module="_components/form/input">
+							<label class="ade-input__label ade-input__label--float ade-input__label--required"
+								for="ade-email">Email</label>
+							<div class="ade-input__wrapper">
+								<input type="email" placeholder="" pattern="" data-bouncer-message="" id="ade-email" name="email"
+									data-bouncer-target="#ade-email-msg" value="" minlength="" maxlength="" class="ade-input__input "
+									inputmode="" required="">
+							</div>
+							<div class="ade-input__msg" id="ade-email-msg"></div>
+						</div>
+
+						<div class="ade-input ade-mbottom  " data-type="password" data-module="_components/form/input">
+							<label class="ade-input__label ade-input__label--float ade-input__label--required"
+								for="ade-password">Password</label>
+							<div class="ade-input__wrapper">
+								<input type="password" placeholder="" pattern="" data-bouncer-message="" id="ade-password"
+									name="password" data-bouncer-target="#ade-password-msg" value="" minlength="6" maxlength=""
+									class="ade-input__input " inputmode="" required="">
+								<div class="ade-input__pass-button">
+									<span class="ade-input__icon ade-input__icon--pass ade-input__icon--show">
+										<svg width="176px" height="176px" viewBox="0 0 176 176" version="1.1"
+											xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<g id="eye-show" transform="translate(0.000000, 34.000000)" fill="#000000" fill-rule="nonzero">
+													<path
+														d="M174.876149,53.67625 C173.468179,51.4840625 139.852895,0 88,0 C36.1471046,0 2.5318208,51.4840625 1.1238508,53.67625 C-0.374616933,56.0138692 -0.374616933,58.9861308 1.1238508,61.32375 C2.5318208,63.5159375 36.1471046,115 88,115 C139.852895,115 173.468179,63.5159375 174.876149,61.32375 C176.374617,58.9861308 176.374617,56.0138692 174.876149,53.67625 Z M87.5,87 C71.2075999,87 58,74.0162577 58,58 C58,41.9837422 71.2075999,29 87.5,29 C103.7924,29 117,41.9837422 117,58 C117,65.6912782 113.891973,73.0675416 108.35965,78.5060965 C102.827327,83.9446513 95.3238868,87 87.5,87 Z"
+														id="Shape"></path>
+												</g>
+											</g>
+										</svg>
+									</span>
+									<span class=" ade-input__icon ade-input__icon--pass ade-input__icon--hide ade-hide">
+										<svg width="176px" height="176px" viewBox="0 0 176 176" version="1.1"
+											xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<g id="eye-hide" transform="translate(0.000000, 11.000000)" fill="#000000" fill-rule="nonzero">
+													<path
+														d="M174.873361,76.9948876 C168.041344,66.6762923 159.934279,57.2696301 150.746165,49 L64,136.137872 C71.6822073,138.646641 79.7038582,139.949351 87.7816816,140 C139.763218,140 173.461898,87.1043577 174.873361,84.8520652 C176.375546,82.4503535 176.375546,79.3965994 174.873361,76.9948876 Z"
+														id="Path"></path>
+													<path
+														d="M167.835836,2.1412186 C164.950261,-0.713739533 160.277064,-0.713739533 157.391488,2.1412186 L127.396326,31.8690762 C115.500591,25.5039173 102.219265,22.1069411 88.7012361,21.9719999 C36.4351462,21.9719999 2.55199585,74.4462839 1.13280631,76.6806349 C-0.377602102,79.063215 -0.377602102,82.0926434 1.13280631,84.4752235 C10.8118627,98.7912975 22.9713895,111.296335 37.04865,121.41161 L16.9508564,141.330301 C14.9836941,143.158546 14.1772823,145.90348 14.8467136,148.492564 C15.5161449,151.081648 17.5551626,153.103926 20.1670529,153.769222 C22.7789432,154.43452 25.5491292,153.637237 27.3952045,151.688899 L167.835836,12.4998166 C170.721388,9.63911578 170.721388,5.00191943 167.835836,2.1412186 Z M59.1347873,80.5779292 C59.1347873,64.3943487 72.3721373,51.2749646 88.7012361,51.2749646 C93.9532596,51.3023668 99.0971217,52.7567726 103.57316,55.47994 L63.3775727,95.3099947 C60.6343512,90.8746042 59.1671735,85.7801783 59.1347873,80.5779292 L59.1347873,80.5779292 Z"
+														id="Shape"></path>
+												</g>
+											</g>
+										</svg>
+									</span>
+								</div>
+							</div>
+							<div class="ade-input__msg" id="ade-password-msg"></div>
+						</div>
+
+						<!-- <h2 class="ade-newsletter-form__group__title">I’m here to*</h2> -->
+						<!-- <div class="ade-newsletter-form__group"> -->
+
+						<fieldset class="ade-newsletter-form__group">
+							<legend><h2 class="ade-newsletter-form__group__title">I’m here to*</h2></legend>
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-profile-checkbox-1" name="interests[1]"
+									data-bouncer-target="#ade-profile-checkbox-1-msg" class="ade-checkbox__input required-group-2"
+									data-required-group="2" value="1"> -->
+									<!-- <label for="ade-profile-checkbox-1" class="ade-checkbox__label"> -->
+								<div class="ade-checkbox__check" role="checkbox" aria-checked="false" id="ade-profile-checkbox-1" tabindex="0" aria-labelledby="ade-profile-checkbox-1-label"></div>
+								<label id="ade-profile-checkbox-1-label" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">Buy a festival ticket</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg " id="ade-profile-checkbox-1-msg"></div>
+							</div>
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-profile-checkbox-2" name="interests[2]" data-bouncer-target="#ade-profile-checkbox-2-msg" class="ade-checkbox__input required-group-2" data-required-group="2" value="2"> -->
+								<!-- <label for="ade-profile-checkbox-2" class="ade-checkbox__label"> -->
+									<div class="ade-checkbox__check" role="checkbox" aria-checked="false" id="ade-profile-checkbox-1" tabindex="0" aria-labelledby="ade-profile-checkbox-2-label"></div>
+									<label id="ade-profile-checkbox-2-label" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">Connect with the industry</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg " id="ade-profile-checkbox-2-msg"></div>
+							</div>
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-profile-checkbox-3" name="interests[3]" data-bouncer-target="#ade-profile-checkbox-3-msg" class="ade-checkbox__input required-group-2" data-required-group="2" value="3"> -->
+								<!-- <label for="ade-profile-checkbox-3" class="ade-checkbox__label"> -->
+									<div class="ade-checkbox__check" role="checkbox" aria-checked="false" id="ade-profile-checkbox-1" tabindex="0" aria-labelledby="ade-profile-checkbox-3-label"></div>
+									<label id="ade-profile-checkbox-3-label" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">Get industry insights</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg " id="ade-profile-checkbox-3-msg"></div>
+							</div>
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-profile-checkbox-4" name="interests[4]" data-bouncer-target="#ade-profile-checkbox-4-msg" class="ade-checkbox__input required-group-2" data-required-group="2" value="4"> -->
+								<!-- <label for="ade-profile-checkbox-4" class="ade-checkbox__label"> -->
+									<div class="ade-checkbox__check" role="checkbox" aria-checked="false" id="ade-profile-checkbox-1" tabindex="0" aria-labelledby="ade-profile-checkbox-4-label"></div>
+									<label id="ade-profile-checkbox-4-label" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">Boost my music career</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg " id="ade-profile-checkbox-4-msg"></div>
+							</div>
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-profile-checkbox-5" name="interests[5]" data-bouncer-target="#ade-profile-checkbox-5-msg" class="ade-checkbox__input required-group-2" data-required-group="2" value="5"> -->
+								<!-- <label for="ade-profile-checkbox-5" class="ade-checkbox__label"> -->
+									<div class="ade-checkbox__check" role="checkbox" aria-checked="false" id="ade-profile-checkbox-1" tabindex="0" aria-labelledby="ade-profile-checkbox-5-label"></div>
+									<label id="ade-profile-checkbox-5-label" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">Experience ADE</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg ade-checkbox__msg--show" id="ade-profile-checkbox-5-msg">
+								</div>
+							</div>
+
+							</fieldset>
+						<!-- </div> -->
+
+						<div class="ade-mpadding">
+
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="ade-checkbox-gdpr" name="gdpr" data-bouncer-target="#ade-checkbox-gdpr-msg"
+									class="ade-checkbox__input " data-required-group="" value="" required=""> -->
+								<div class="ade-checkbox__check" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="ade-checkbox-gdpr"></div>
+								<label id="ade-checkbox-gdpr" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text ade-checkbox__label-text--required">
+										Yes, I would like to create an ADE account and hereby agree to the processing of my personal data in
+										accordance with ADE's
+										<a class="ade-link-inherit" target="_blank"
+											href="https://www.amsterdam-dance-event.nl/en/terms-and-conditions/">terms &amp; conditions</a>
+										and
+										<a class="ade-link-inherit" target="_blank"
+											href="https://www.amsterdam-dance-event.nl/en/privacy/">privacy policy</a>.
+									</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg ade-checkbox__msg--show" id="ade-checkbox-gdpr-msg"></div>
+							</div>
+
+						</div>
+
+						<div class="ade-mpadding">
+							<div class="ade-checkbox" onclick="changeCheckbox(event)" onKeyPress="changeCheckbox(event)">
+								<!-- <input type="checkbox" id="partner-consent" name="partner-consent"
+									data-bouncer-target="#partner-consent-msg" class="ade-checkbox__input " data-required-group=""
+									value="true"> -->
+								<div class="ade-checkbox__check" role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="partner-consent"></div>
+								<label id="partner-consent" class="ade-checkbox__label">
+									<span class="ade-checkbox__label-text">
+										Yes, I would like to be updated via e-mail and online media about brands, activations and events of
+										ADE’s main partner HEINEKEN Nederland. I can unsubscribe at any time. See the
+										<a class="ade-link-inherit" target="_blank"
+											href="https://www.heineken.com/nl/nl/privacyverklaring">Privacy statement</a> for more info.
+									</span>
+								</label>
+								<div class="ade-input__msg ade-checkbox__msg " id="partner-consent-msg"></div>
+							</div>
+						</div>
+
+						<div class="recaptcha">
+							<input type="text" class="recaptcha" hidden="">
+							<div class="g-recaptcha" id="gRecaptchaContainer" data-sitekey="6LfgcDscAAAAAFtYyTQwX0TLS8G3mm16l8Lj8R9C">
+								<div style="width: 304px; height: 78px;">
+									<div><iframe title="reCAPTCHA"
+											src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfgcDscAAAAAFtYyTQwX0TLS8G3mm16l8Lj8R9C&amp;co=aHR0cHM6Ly93d3cuYW1zdGVyZGFtLWRhbmNlLWV2ZW50Lm5sOjQ0Mw..&amp;hl=en-GB&amp;v=qljbK_DTcvY1PzbR7IG69z1r&amp;size=normal&amp;cb=4apz5sdfzmis"
+											width="304" height="78" role="presentation" name="a-2im4r0jzninf" frameborder="0" scrolling="no"
+											sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+									</div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+										style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+								</div><iframe style="display: none;"></iframe>
+							</div>
+						</div>
+
+					</div>
+
+					<button class="ade-register__button ade-button ade-button--fullwidth" type="submit">
+						<span class="ade-button--fullwidth__icon">
+							<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g id="Sprint-1-Delivery-001" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+									stroke-linecap="square">
+									<g id="8.2_Main-Nav---DropDown---Desktop" transform="translate(-312.000000, -313.000000)"
+										stroke="#000000" stroke-width="3">
+										<g id="Group-7" transform="translate(119.000000, 285.750000)">
+											<g id="diag-top-right-copy-7" transform="translate(196.000000, 29.000000)">
+												<g id="diag-top-right-copy-3">
+													<path d="M15.0588235,0.941176471 L0,16" id="Path"></path>
+													<polyline id="Path" points="0.941176471 0 16 0 16 15.0588235"></polyline>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</span>
+						Register
+					</button>
+					<div class="ade-register__link-wrapper">
+						<a class="ade-link ade-link--small" href="https://www.amsterdam-dance-event.nl/en/login/"> Already have an
+							account? Login</a>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		function changeCheckbox(event) {
+			event.stopPropagation();
+			let item = event.currentTarget
+			let checkbox = item.querySelector('.ade-checkbox__check')
+			
+			String(checkbox.getAttribute('aria-checked')) === 'true' ?
+			checkbox.setAttribute('aria-checked', 'false') :
+			checkbox.setAttribute('aria-checked', 'true');
+
+			// switch(checkbox.getAttribute('aria-checked')) {
+			// 	case "true":
+			// 		checkbox.setAttribute('aria-checked', "false");
+			// 		break;
+			// 	case "false":
+			// 		checkbox.setAttribute('aria-checked', "true");
+			// 		break;
+			// 	}
+		}
+	</script>
+	
+</body>
+
+</html>
